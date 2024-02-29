@@ -9,7 +9,6 @@ This backend project provides several functionalities related to cryptocurrency 
 - [Endpoints](#endpoints)
 - [Background Job](#background-job)
 - [Deployment](#deployment)
-- [Note](#note)
 
 ## Features
 
@@ -93,7 +92,3 @@ The background job for updating the list of cryptocurrencies runs automatically 
 ## Deployment
 
 The backend is deployed on Render and can be accessed at [https://assignment-koinx-backend.onrender.com](https://assignment-koinx-backend.onrender.com).
-
-## Note
-
-The deployed backend API will spin down with inactivity, which can delay requests by 50 seconds or more (since it is hosted on a free server). So, please be patient while making fresh API calls after a break of some time :) 
