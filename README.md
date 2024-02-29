@@ -99,5 +99,6 @@ The backend is deployed on Render and can be accessed at [https://assignment-koi
 The API endpoint that compares the prices of two cryptocurrencies on a particular date (`/get-relative-price-on-date`) utilizes the Coingecko free API. Due to the rate limit of the Coingecko's free API plan, you may encounter an Axios Error: 429 [Too many requests]. This error is triggered when the number of requests exceeds the allowed limit.
 
 The rate limit issue is temporary and is imposed by the Coingecko API. If you encounter this error, please be patient and wait for some time before making fresh API calls.
+
 If you need to make continuous requests, consider upgrading to a premium Coingecko API plan to avoid rate limits.
 
