@@ -8,6 +8,8 @@ This backend project provides several functionalities related to cryptocurrency 
 - [Usage](#usage)
 - [Endpoints](#endpoints)
 - [Background Job](#background-job)
+- [Deployment](#deployment)
+- [Note](#note)
 
 ## Features
 
@@ -32,10 +34,10 @@ This backend project provides several functionalities related to cryptocurrency 
       "date": "12-01-2023"
     }
     ```
-  - Response example:
+  - Example response:
     ```json
     {
-      "value": 0.017746
+      "value": 0.077223
     }
     ```
 
@@ -48,7 +50,7 @@ This backend project provides several functionalities related to cryptocurrency 
       "currency": "ethereum"
     }
     ```
-  - Response example:
+  - Example response:
     ```json
     {
       "companies": [
@@ -70,7 +72,7 @@ This backend project provides several functionalities related to cryptocurrency 
 
 1. Set up your MongoDB database and provide the connection URI in the `.env` file.
 2. Start the application: `npm start`
-3. The server will run on `http://localhost:5000` by default.
+3. The server will run on `http://localhost:3000` by default.
 
 ## Endpoints
 
@@ -87,3 +89,11 @@ This backend project provides several functionalities related to cryptocurrency 
 ## Background Job
 
 The background job for updating the list of cryptocurrencies runs automatically every 1 hour.
+
+## Deployment
+
+The backend is deployed on Render and can be accessed at [https://assignment-koinx-backend.onrender.com](https://assignment-koinx-backend.onrender.com).
+
+## Note
+
+The deployed backend API will spin down with inactivity, which can delay requests by 50 seconds or more (since it is hosted on a free server). So, please be patient while making fresh API calls after a break of some time :) 
