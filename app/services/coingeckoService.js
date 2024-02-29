@@ -45,7 +45,7 @@ const CoingeckoService = {
             console.log("price ", priceOfDay)
             return price;
         } catch (error) {
-            console.log("error: ", error);
+            throw new Error(`Error in API call: ${error.message}`)
         }
     }, 
 

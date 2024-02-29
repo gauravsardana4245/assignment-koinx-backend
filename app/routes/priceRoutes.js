@@ -3,6 +3,6 @@ const PriceController = require('../controllers/priceController');
 
 const router = express.Router();
 
-router.post('/get-price-on-date', PriceController.getPriceOnDate);
+router.post('/get-relative-price-on-date', PriceController.getRelativePriceOnDate);
 
 module.exports = router;

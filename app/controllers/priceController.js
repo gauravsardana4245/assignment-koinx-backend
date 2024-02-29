@@ -1,7 +1,7 @@
 const CoingeckoService = require('../services/coingeckoService');
 
 
-const getPriceOnDate =  async (req, res) => {
+const getRelativePriceOnDate =  async (req, res) => {
     try {
         const { fromCurrency, toCurrency, date } = req.body;
         const price1inINR = await CoingeckoService.getPriceOnDate(fromCurrency, "inr", date);
@@ -10,11 +10,11 @@ const getPriceOnDate =  async (req, res) => {
         const precisedValue = (Number)(valueOfFromCurrencyInToCurrency.toPrecision(5));
         return res.status(200).json({ value: precisedValue });
     } catch (error) {
-        return res.status(500).json({ error: 'Internal Server Error' });
+        return res.status(500).json({ error:  error.message });
     }
 }
 
 
 module.exports = {
-    getPriceOnDate
+    getRelativePriceOnDate
 };
